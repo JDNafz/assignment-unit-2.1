@@ -24,29 +24,55 @@ let luckyNumber = 13
 console.log("My name is " + fullName + ", and I think " + luckyNumber + " is a winner!");
 
 // 7 - Create a variable named `adventurous` and set it to a boolean value (true or false)
+let adventurous = true;
 
 // 8 - Create a variable named `food`, and set its value to a string of your favorite food
+let food = "bacon";
 
 // 9 - Create a variable called `pets` and set it to the value of the number of pets you have
-
+let pets = 0;
+console.log("pets:" + pets);
 // 10 - Create a variable called `friendsPets` and assign it the value of the number of pets your friend has
+let friendsPets = 3; // Alison has three cats
 
 // 11 - Add two pets to your `pets` variable
+pets += 2;
+console.log("did pets increment by two? pets is now:" + pets);
 
 // 12 - Create a constant variable called `allowedPets` and set it to a number value of your choice
+let allowedPets = 5;
 
 // 13 - Create a conditional: if adventurous is true, console log "Adventures are great!", 
 // if it's not true, console log "How about we stay home?"
-
+if (adventurous) {
+    console.log("Adventures are great!");
+} else {
+    console.log("How about we stay home?");
+}
 
 // 14 - Create a compound conditional: if luckyNumber is 2 and adventurous is true,
 // console log "Roll the dice!"
+if (luckyNumber === 2 && adventurous){
+    console.log("Roll the dice!");
+}
+
 
 // 15 - Write a conditional that console logs "I can have more pets!" 
 //if the value of `pets` is less than the value of `allowedPets`,
 // console logs "I have enough pets" if the value of `pets` is equal to the value of `allowedPets`,
 // and console logs "Oh no, I have too many pets!"
 // if the value of `pets` is greater than the value of `allowedPets`.
+
+if (pets < allowedPets){
+    console.log("I can have more pets!");
+} else if (pets == allowedPets){
+    console.log("I have enough pets");
+} else if (pets > allowedPets){
+    console.log("Oh no, I have too many pets!");
+} else {
+    console.log("Uh oh, I did something unexpected/wrong");
+}
+
 
 // STRETCH GOALS:
 
@@ -56,13 +82,55 @@ console.log("My name is " + fullName + ", and I think " + luckyNumber + " is a w
 // be sure to think through all the scenarios. 
 // console.log `mostPets` after the conditional has run.
 
+let mostPets = 0;
+if (pets >= friendsPets){ // if pets and friendsPets are equal, it shouldn't matter which value gets assigned to mostPets
+    mostPets = pets;
+} else {
+    mostPets = friendsPets;
+}
+console.log("mostPets:" + mostPets);
+
+
+
 // 17 - Write a *switch* statement that logs:
 //      "First is the worst" if your lucky number is 1
 //      "Second is the best" if your lucky number is 2
 //      "Third is the one with the polka dot dress" if your lucky number is 3
 //      Otherwise, log "Luck is what happens when preparation meets opportunity"
 //      You'll need to research how to use switch statements!
+switch(luckyNumber){
+    case 1: 
+        console.log("First is the worst");
+        break;
+    case 2:
+        console.log("Second is the best");
+        break;
+    case 3:
+        console.log("Third is the one with the polka dot dress");
+        break;
+    default:
+        console.log("Luck is what happens when preparation meets opportunity");
+        break;
+}
+
+
+
+
 
 // 18 -- Rewrite question 13 with a `ternary` operator. You'll need to do research!
+    // 13 - Create a conditional: if adventurous is true, console log "Adventures are great!", 
+    // if it's not true, console log "How about we stay home?"
+    /* 
+    
+    if (adventurous) {
+         console.log("Adventures are great!");
+    } else {
+         console.log("How about we stay home?");
+    } */
+console.log("adventurous is set to:" + adventurous + ". Next line uses a ternary operator inside of the console.log()");
+console.log(adventurous ? "Adventures are great!" : "How about we stay home?");
 
+console.log("same thing, but now adventurous is set to false:")
+adventurous = false;
+console.log(adventurous ? "Adventures are great!" : "How about we stay home?");
 
