@@ -46,7 +46,9 @@ let allowedPets = 5;
 // if it's not true, console log "How about we stay home?"
 
 // adventurous = false; // this line was used to test the conditional statement and check if the false scenario works.
-if (adventurous) {
+// The conditional statement could also be completed without an equals operator like so:
+// if (adventurous) {
+if (adventurous === true) {
     console.log("Adventures are great!");
 } else {
     // console.log("LOOK HERE DID IT WORK?????")
