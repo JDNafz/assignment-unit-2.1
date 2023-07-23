@@ -45,7 +45,9 @@ let allowedPets = 5;
 // 13 - Create a conditional: if adventurous is true, console log "Adventures are great!", 
 // if it's not true, console log "How about we stay home?"
 
-// adventurous = false; // this line was used to test the conditional statement and check if the false scenario works.
+// this line was used to test the conditional statement and check if the false scenario works.
+// adventurous = false; 
+
 // The conditional statement could also be completed without an equals operator like so:
 // if (adventurous) {
 if (adventurous === true) {
@@ -103,24 +105,28 @@ console.log("mostPets:" + mostPets);
 //      "Third is the one with the polka dot dress" if your lucky number is 3
 //      Otherwise, log "Luck is what happens when preparation meets opportunity"
 //      You'll need to research how to use switch statements!
-switch(luckyNumber){
-    case 1: 
-        console.log("First is the worst");
-        break;
-    case 2:
-        console.log("Second is the best");
-        break;
-    case 3:
-        console.log("Third is the one with the polka dot dress");
-        break;
-    default:
-        console.log("Luck is what happens when preparation meets opportunity");
-        break;
-}
 
-
-
-
+//I made it into a function to test all the cases without having to re-write the switch statement
+function luckyNumberCheck(selectedNumber){
+    switch(selectedNumber){
+        case 1: 
+            console.log("First is the worst");
+            break;
+        case 2:
+            console.log("Second is the best");
+            break;
+        case 3:
+            console.log("Third is the one with the polka dot dress");
+            break;
+        default:
+            console.log("Luck is what happens when preparation meets opportunity");
+            break;
+    };
+};
+luckyNumberCheck(luckyNumber);
+luckyNumberCheck(3);
+luckyNumberCheck(2);
+luckyNumberCheck(1);
 
 // 18 -- Rewrite question 13 with a `ternary` operator. You'll need to do research!
     // 13 - Create a conditional: if adventurous is true, console log "Adventures are great!", 
@@ -133,9 +139,11 @@ switch(luckyNumber){
          console.log("How about we stay home?");
     } */
 console.log("adventurous is set to:" + adventurous + ". Next line uses a ternary operator inside of the console.log()");
+
 console.log(adventurous ? "Adventures are great!" : "How about we stay home?");
 
 console.log("same thing, but now adventurous is set to false:")
 adventurous = false;
+
 console.log(adventurous ? "Adventures are great!" : "How about we stay home?");
 
